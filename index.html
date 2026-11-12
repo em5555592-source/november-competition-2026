@@ -51,7 +51,7 @@
     .official-header {
       background: linear-gradient(135deg, #004d25 0%, #006b35 60%, #004220 100%);
       color: #ffffff;
-      padding: 20px 16px 26px;
+      padding: 20px 16px 28px;
       text-align: center;
       position: relative;
       border-bottom: 4px solid var(--oman-gold);
@@ -99,10 +99,18 @@
     }
 
     .school-title {
-      font-size: 17px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 800;
       color: #ffdf8e;
-      margin-top: 4px;
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    .school-subtitle {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: #ffeab3;
+      line-height: 1.4;
     }
 
     .container {
@@ -124,19 +132,21 @@
     .card-banner {
       background: linear-gradient(120deg, var(--oman-red-dark), var(--oman-red));
       color: #ffffff;
-      padding: 20px 18px;
+      padding: 22px 18px;
       text-align: center;
     }
 
     .card-banner h1 {
-      font-size: 23px;
+      font-size: 24px;
       font-weight: 800;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
-    .card-banner p {
-      font-size: 14px;
-      opacity: 0.94;
+    .banner-sub {
+      font-size: 16.5px;
+      font-weight: 700;
+      line-height: 1.6;
+      color: #ffffff;
     }
 
     .card-body {
@@ -213,7 +223,6 @@
     }
 
     input[type="text"],
-    input[type="tel"],
     input[type="url"],
     select {
       width: 100%;
@@ -509,14 +518,18 @@
       <div>وزارة التعليم</div>
       <div>المديرية العامة للتعليم بمحافظة ظفار</div>
     </div>
-    <div class="school-title">مدرسة محمد بن القاسم الثقفي للتعليم الأساسي (٥ - ١٠)</div>
+    <div class="school-title">مدرسة محمد بن القاسم الثقفي</div>
+    <div class="school-subtitle">للتعليم الأساسي (٥ - ١٠)</div>
   </header>
 
   <main class="container">
     <div class="card">
       <div class="card-banner">
         <h1>مسابقة «نوفمبر المجيد 2026»</h1>
-        <p>احتفالاً بالعيد الوطني المجيد — مخصصة لطلبة المدرسة (٥ - ١٠)</p>
+        <div class="banner-sub">
+          <div>احتفالاً بالعيد الوطني المجيد</div>
+          <div>مخصصة لطلبة المدرسة</div>
+        </div>
       </div>
 
       <!-- المرحلة الأولى: واجهة دخول الطالب -->
@@ -570,12 +583,6 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="guardianPhone">رقم هاتف ولي الأمر للتواصل <span class="req">*</span></label>
-          <input type="tel" id="guardianPhone" maxlength="8" placeholder="مثال: 9XXXXXXX" inputmode="numeric" />
-          <div class="error-text" id="errPhone">يرجى إدخال رقم هاتف عُماني صحيح مكون من 8 أرقام.</div>
-        </div>
-
         <button type="button" class="btn btn-primary" id="enterQuizBtn">
           <span>دخول وعرض أسئلة المسابقة</span>
           <span>⬅</span>
@@ -589,50 +596,53 @@
           <button type="button" class="btn-edit" id="editInfoBtn">تعديل البيانات</button>
         </div>
 
+        <!-- السؤال الأول -->
         <div class="question-box">
           <div class="question-title">
             <span class="q-num">١</span>
-            <span>في أي عامٍ وُلِدَ حضرةُ صاحبِ الجلالةِ السلطان هيثم بن طارق -حفظه الله ورعاه-؟</span>
+            <span>يتكون شعار سلطنة عُمان الرسمي من:</span>
           </div>
           <div class="options-list">
             <label class="option-item">
-              <input type="radio" name="q1" value="أ- 11 أكتوبر 1955م" />
-              <span>أ- 11 أكتوبر 1955م</span>
+              <input type="radio" name="q1" value="أ) نخلة وخنجر وسيفين متقاطعين" />
+              <span>أ) نخلة وخنجر وسيفين متقاطعين</span>
             </label>
             <label class="option-item">
-              <input type="radio" name="q1" value="ب- 11 أكتوبر 1956م" />
-              <span>ب- 11 أكتوبر 1956م</span>
+              <input type="radio" name="q1" value="ب) خنجر وسيفين متقاطعين" />
+              <span>ب) خنجر وسيفين متقاطعين</span>
             </label>
             <label class="option-item">
-              <input type="radio" name="q1" value="ج- 11 أكتوبر 1957م" />
-              <span>ج- 11 أكتوبر 1957م</span>
+              <input type="radio" name="q1" value="ج) قلعة تاريخية يتوسطها خنجر" />
+              <span>ج) قلعة تاريخية يتوسطها خنجر</span>
             </label>
           </div>
           <div class="error-text" id="errQ1">يرجى اختيار إجابة للسؤال الأول.</div>
         </div>
 
+        <!-- السؤال الثاني -->
         <div class="question-box">
           <div class="question-title">
             <span class="q-num">٢</span>
-            <span>كم يبلغ عدد المدارس الحكومية في محافظة ظفار للعام الدراسي 2025 / 2026م؟</span>
+            <span>تحتفل سلطنة عُمان باليوم الوطني المجيد في شهر نوفمبر من كل عام، وتحديداً في يوم:</span>
           </div>
           <div class="options-list">
             <label class="option-item">
-              <input type="radio" name="q2" value="أ- 158 مدرسة" />
-              <span>أ- 158 مدرسة</span>
+              <input type="radio" name="q2" value="أ) 16 نوفمبر" />
+              <span>أ) 16 نوفمبر</span>
             </label>
             <label class="option-item">
-              <input type="radio" name="q2" value="ب- 168 مدرسة" />
-              <span>ب- 168 مدرسة</span>
+              <input type="radio" name="q2" value="ب) 18 نوفمبر" />
+              <span>ب) 18 نوفمبر</span>
             </label>
             <label class="option-item">
-              <input type="radio" name="q2" value="ج- 178 مدرسة" />
-              <span>ج- 178 مدرسة</span>
+              <input type="radio" name="q2" value="ج) 20 نوفمبر" />
+              <span>ج) 20 نوفمبر</span>
             </label>
           </div>
           <div class="error-text" id="errQ2">يرجى اختيار إجابة للسؤال الثاني.</div>
         </div>
 
+        <!-- السؤال الثالث -->
         <div class="question-box">
           <div class="question-title">
             <span class="q-num">٣</span>
@@ -704,8 +714,8 @@
     (function () {
       var SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz8XZ7AvilJaJ71-zgFNB-nvtK6XVvTO6X2pum8NcBsdS0iQYYJIkqKJtWN5nY6Imit2A/exec";
 
-      var STORAGE_LOCK_KEY = "mbq_nov2026_submitted_v2";
-      var STORAGE_URL_KEY = "mbq_nov2026_script_url_v2";
+      var STORAGE_LOCK_KEY = "mbq_nov2026_submitted_v4";
+      var STORAGE_URL_KEY = "mbq_nov2026_script_url_v4";
 
       var stepEntry = document.getElementById("stepEntry");
       var stepQuestions = document.getElementById("stepQuestions");
@@ -714,7 +724,6 @@
       var studentNameInput = document.getElementById("studentName");
       var studentGradeInput = document.getElementById("studentGrade");
       var studentSectionInput = document.getElementById("studentSection");
-      var guardianPhoneInput = document.getElementById("guardianPhone");
 
       var enterQuizBtn = document.getElementById("enterQuizBtn");
       var editInfoBtn = document.getElementById("editInfoBtn");
@@ -728,12 +737,6 @@
       var saveUrlBtn = document.getElementById("saveUrlBtn");
       var testConnectionBtn = document.getElementById("testConnectionBtn");
       var resetLockBtn = document.getElementById("resetLockBtn");
-
-      function normalizeDigits(str) {
-        return str.replace(/[٠-٩]/g, function (d) {
-          return "٠١٢٣٤٥٦٧٨٩".indexOf(d);
-        });
-      }
 
       function checkLockState() {
         if (localStorage.getItem(STORAGE_LOCK_KEY) === "true") {
@@ -794,8 +797,6 @@
         var nameVal = studentNameInput.value.trim();
         var gradeVal = studentGradeInput.value;
         var sectionVal = studentSectionInput.value;
-        var phoneVal = normalizeDigits(guardianPhoneInput.value.trim()).replace(/\s+/g, "");
-        guardianPhoneInput.value = phoneVal;
 
         var valid = true;
 
@@ -818,13 +819,6 @@
           valid = false;
         } else {
           document.getElementById("errSection").style.display = "none";
-        }
-
-        if (!/^[79]\d{7}$/.test(phoneVal)) {
-          document.getElementById("errPhone").style.display = "block";
-          valid = false;
-        } else {
-          document.getElementById("errPhone").style.display = "none";
         }
 
         if (!valid) return;
@@ -881,7 +875,6 @@
           name: studentNameInput.value.trim(),
           grade: studentGradeInput.value,
           section: studentSectionInput.value,
-          phone: normalizeDigits(guardianPhoneInput.value.trim()),
           q1: q1El.value,
           q2: q2El.value,
           q3: q3El.value
@@ -919,7 +912,7 @@
       testConnectionBtn.addEventListener("click", function () {
         var url = scriptUrlInput.value.trim() || getActiveUrl();
         if (!url || url.indexOf("https://") !== 0) {
-          alert("يرجى إدخال رابط Web App الصحيح أولاً (يبدأ بـ https://script.google.com).");
+          alert("يرجى إدخال رابط Web App الصحيح أولاً.");
           return;
         }
         localStorage.setItem(STORAGE_URL_KEY, url);
@@ -930,9 +923,8 @@
           name: "اختبار الربط (تجريبي)",
           grade: "الصف الثامن",
           section: "١",
-          phone: "90000000",
-          q1: "ب- 11 أكتوبر 1956م",
-          q2: "ب- 168 مدرسة",
+          q1: "ب) خنجر وسيفين متقاطعين",
+          q2: "ج) 20 نوفمبر",
           q3: "ب- من أفضل 20 دولة"
         }, function () {
           testConnectionBtn.disabled = false;
